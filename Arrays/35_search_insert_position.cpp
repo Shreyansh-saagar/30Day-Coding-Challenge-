@@ -1,6 +1,7 @@
 /* Leetcode 35 -> Search Insert Position */
 #include <iostream>
 #include <vector>
+using namespace std;
 
 class Solution {
 public:

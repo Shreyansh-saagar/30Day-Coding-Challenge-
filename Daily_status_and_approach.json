@@ -1,11 +1,14 @@
 {
     "date": "05.03.2024",
     "platform":"Leetcode",
-    "question_code_attempted":[26],
+    "question_code_attempted":[26,35],
     "question_name":{
         "Remove Duplicates from Sorted Array":{
             "approach 1":"int count = 0;\n for(int i = 0; i < nums.size(); i++){\nif(nums[i] != nums[count]){\ncount++;\nnums[count] = nums[i];\n}\n}\nreturn count + 1;",
             "approach 2":"        int count = 1;\nfor(int i = 1; i< nums.size(); i++){\nif(nums[i]!=nums[i-1]){\nnums[count] = nums[i];\ncount++;\n}\n}\nreturn count;"
+        },
+        "Search Insert Position":{
+            "approach 1":"for(int i = 0; i < nums.size();i++){\nif(nums[i] == target){\nreturn i;\n}\nif(nums[i] > target){\nreturn i;\n}\n}\nreturn nums.size();"
         }
     }
 }
