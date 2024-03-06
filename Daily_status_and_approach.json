@@ -1,14 +1,102 @@
-{
-    "date": "05.03.2024",
-    "platform":"Leetcode",
-    "question_code_attempted":[26,35],
-    "question_name":{
-        "Remove Duplicates from Sorted Array":{
-            "approach 1":"int count = 0;\n for(int i = 0; i < nums.size(); i++){\nif(nums[i] != nums[count]){\ncount++;\nnums[count] = nums[i];\n}\n}\nreturn count + 1;",
-            "approach 2":"        int count = 1;\nfor(int i = 1; i< nums.size(); i++){\nif(nums[i]!=nums[i-1]){\nnums[count] = nums[i];\ncount++;\n}\n}\nreturn count;"
-        },
-        "Search Insert Position":{
-            "approach 1":"for(int i = 0; i < nums.size();i++){\nif(nums[i] == target){\nreturn i;\n}\nif(nums[i] > target){\nreturn i;\n}\n}\nreturn nums.size();"
+[
+    {
+        "date": "05.03.2024",
+        "platform":"Leetcode",
+        "question_code_attempted":[26,35],
+        "question_name":{
+            "Remove Duplicates from Sorted Array":{
+                "approach":{
+                    "first":[
+                        "int count = 0;",
+                        "for (int i = 0; i < nums.size(); i++) {",
+                        "  if (nums[i] != nums[count]) {",
+                        "    count++;",
+                        "    nums[count] = nums[i];",
+                        "  }",
+                        "}",
+                        "return count + 1;"
+                    ],
+                    "second":[
+                        "int count = 1;",
+                        "for (int i = 1; i < nums.size(); i++) {",
+                        "  if (nums[i] != nums[i - 1]) {",
+                        "    nums[count] = nums[i];",
+                        "    count++;",
+                        "  }",
+                        "}",
+                        "return count;"
+                    ]
+                }
+            },
+            "Search Insert Position":{
+                "approach":{
+                    "first":[
+                        "for (int i = 0; i < nums.size(); i++) {",
+                        "  if (nums[i] == target) {",
+                        "    return i;",
+                        "  }",
+                        "  if (nums[i] > target) {",
+                        "    return i;",
+                        "  }",
+                        "}",
+                        "return nums.size();"
+                    ]
+                }
+            }
+        }
+    },{
+        "date": "06.03.2024",
+        "platform":"Leetcode",
+        "question_code_attempted":[66,88,121],
+        "question_name":{
+            "Plus One":{
+                "approach":{
+                    "first":[
+                        "int n = digits.size();",
+                        "digits[n - 1] += 1;",
+                        "for (int i = n - 1; i > 0; --i) {",
+                        "  if (digits[i] >= 10) {",
+                        "    digits[i] -= 10;",
+                        "    digits[i - 1] += 1;",
+                        "  }",
+                        "}",
+                        "if (digits[0] >= 10) {",
+                        "  digits[0] -= 10;",
+                        "  digits.insert(digits.begin(), 1);",
+                        "}",
+                        "return digits;"
+                    ]
+                }
+            },
+            "Merge sorted array":{
+                "first":[
+                    "int i = m-1, j = n-1, k = m+n -1;",
+                    "while(i >= 0 && j >= 0){",
+                        "if(nums1[i] > nums2[j]){",
+                            "nums1[k] = nums1[i];",
+                            "i--;",
+                        "}else{",
+                            "nums1[k] = nums2[j];",
+                            "j--;",
+                        "}",
+                        "k--;",
+                    "}",
+                    "while(j >= 0){",
+                        "nums1[k] = nums2[j];",
+                        "k--;j--;",
+                    "}"
+                ]
+            },
+            "Best time to buy and sell stock":[
+                "int minPrice = INT_MAX;",
+                "int maxProfit = 0;",
+                "for(int price: prices){",
+                    "minPrice = min(minPrice,price);",
+                    "int profit = price - minPrice;",
+                    "maxProfit = max(maxProfit,profit);",
+                "}",
+                "return maxProfit;"
+            ]
         }
     }
-}
+]
