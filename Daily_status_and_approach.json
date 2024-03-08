@@ -98,5 +98,49 @@
                 "return maxProfit;"
             ]
         }
+    },{
+        "date": "07.03.2024",
+        "platform":"Leetcode",
+        "question_code_attempted":[136],
+        "question_name":{
+            "Single Number":{
+                "approach":{
+                    "first":[
+                        "int res = 0;",
+                        "for(int num :nums){",
+                            "res ^= num;",
+                        "}return res;"
+                    ],
+                    "second":[
+                        "int n = nums.size();",
+                        "for (int i = 0; i < n; ++i) {",
+                            "bool foundDuplicate = false;",
+                            "for (int j = 0; j < n; ++j) {",
+                                "if (i != j && nums[i] == nums[j]) {",
+                                    "foundDuplicate = true;",
+                                    "break;",
+                                "}}",
+                            "if (!foundDuplicate) {",
+                                "return nums[i];",
+                            "}}return -1;"
+                    ]
+                }
+            },
+            "Majority Elements":{
+                "approach":{
+                    "first":[
+                        "int n = nums.size(); int count = 1; int majorityElement = nums[0];",
+                        "for (int i = 1; i < n; ++i) {",
+                            "if (nums[i] == majorityElement) {",
+                                "count++; } else {",
+                                "count--;",
+                                "if (count == 0) {",
+                                    "majorityElement = nums[i];",
+                                    "count = 1;",
+                        "}}}return majorityElement;"
+                    ]
+                }
+            }
+        }
     }
 ]
