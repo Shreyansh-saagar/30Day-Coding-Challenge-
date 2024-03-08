@@ -101,7 +101,7 @@
     },{
         "date": "07.03.2024",
         "platform":"Leetcode",
-        "question_code_attempted":[136],
+        "question_code_attempted":[136,169],
         "question_name":{
             "Single Number":{
                 "approach":{
@@ -138,6 +138,45 @@
                                     "majorityElement = nums[i];",
                                     "count = 1;",
                         "}}}return majorityElement;"
+                    ]
+                }
+            }
+        }
+    },{
+        "date": "08.03.2024",
+        "platform":"Leetcode",
+        "question_code_attempted":[217,219],
+        "question_name":{
+            "Contains Duplicate":{
+                "approach":{
+                    "first":[
+                        "sort(nums.begin(), nums.end());", 
+                        "for(int i = 0; i < nums.size() - 1; i++){",
+                            "int ele = nums[i];",
+                            "if(ele == nums[i+1]){",
+                                "return true;",
+                        "}}return false;"
+                    ]
+                }
+            },
+            "Contains Duplicate II":{
+                "approach":{
+                    "first":[
+                        "unordered_map<int, int> hashMap;",
+                        "for (int i = 0; i < nums.size(); ++i) {",
+                            "if (hashMap.find(nums[i]) != hashMap.end()) {",
+                                "if (abs(i - hashMap[nums[i]]) <= k) {",
+                                    "return true;",
+                        "}}hashMap[nums[i]] = i;",
+                        "}return false;"
+                    ],"second":[
+                        "for(int i = 0; i < nums.size()-1;i++){",
+                            "int ele = nums[i];",
+                            "for(int j = i+1 ; j < nums.size(); j++){",
+                                "if(ele == nums[j]){",
+                                    "if(abs(i - j)<=k){",
+                                        "return true;",
+                        "}}}}return false;"
                     ]
                 }
             }
