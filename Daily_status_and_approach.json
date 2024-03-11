@@ -245,5 +245,21 @@
         "approach file": "/Arrays/349_Intersection_of_two_array.cpp"
       }
     }
+  },
+  {
+    "date": "11.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [350, 414, 448],
+    "question_name": {
+      "Intersection of two array II": {
+        "approach file": "/Arrays/350_intersection_of_two_array.cpp"
+      },
+      "Third Max no": {
+        "approach file": "/Arrays/414_Third_Max_no.cpp"
+      },
+      "Find All Missing Number": {
+        "approach file": "/Arrays/448_Find_All_Missing_Number.cpp"
+      }
+    }
   }
 ]

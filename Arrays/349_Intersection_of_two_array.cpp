@@ -4,7 +4,6 @@
 #include <algorithm>
 using namespace std;
 
-#include <algorithm>
 class Solution
 {
 public:
