@@ -1,231 +1,249 @@
 [
-    {
-        "date": "05.03.2024",
-        "platform":"Leetcode",
-        "question_code_attempted":[26,35],
-        "question_name":{
-            "Remove Duplicates from Sorted Array":{
-                "approach":{
-                    "first":[
-                        "int count = 0;",
-                        "for (int i = 0; i < nums.size(); i++) {",
-                        "  if (nums[i] != nums[count]) {",
-                        "    count++;",
-                        "    nums[count] = nums[i];",
-                        "  }",
-                        "}",
-                        "return count + 1;"
-                    ],
-                    "second":[
-                        "int count = 1;",
-                        "for (int i = 1; i < nums.size(); i++) {",
-                        "  if (nums[i] != nums[i - 1]) {",
-                        "    nums[count] = nums[i];",
-                        "    count++;",
-                        "  }",
-                        "}",
-                        "return count;"
-                    ]
-                }
-            },
-            "Search Insert Position":{
-                "approach":{
-                    "first":[
-                        "for (int i = 0; i < nums.size(); i++) {",
-                        "  if (nums[i] == target) {",
-                        "    return i;",
-                        "  }",
-                        "  if (nums[i] > target) {",
-                        "    return i;",
-                        "  }",
-                        "}",
-                        "return nums.size();"
-                    ]
-                }
-            }
+  {
+    "date": "05.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [26, 35],
+    "question_name": {
+      "Remove Duplicates from Sorted Array": {
+        "approach": {
+          "first": [
+            "int count = 0;",
+            "for (int i = 0; i < nums.size(); i++) {",
+            "  if (nums[i] != nums[count]) {",
+            "    count++;",
+            "    nums[count] = nums[i];",
+            "  }",
+            "}",
+            "return count + 1;"
+          ],
+          "second": [
+            "int count = 1;",
+            "for (int i = 1; i < nums.size(); i++) {",
+            "  if (nums[i] != nums[i - 1]) {",
+            "    nums[count] = nums[i];",
+            "    count++;",
+            "  }",
+            "}",
+            "return count;"
+          ]
         }
-    },{
-        "date": "06.03.2024",
-        "platform":"Leetcode",
-        "question_code_attempted":[66,88,121],
-        "question_name":{
-            "Plus One":{
-                "approach":{
-                    "first":[
-                        "int n = digits.size();",
-                        "digits[n - 1] += 1;",
-                        "for (int i = n - 1; i > 0; --i) {",
-                        "  if (digits[i] >= 10) {",
-                        "    digits[i] -= 10;",
-                        "    digits[i - 1] += 1;",
-                        "  }",
-                        "}",
-                        "if (digits[0] >= 10) {",
-                        "  digits[0] -= 10;",
-                        "  digits.insert(digits.begin(), 1);",
-                        "}",
-                        "return digits;"
-                    ]
-                }
-            },
-            "Merge sorted array":{
-                "first":[
-                    "int i = m-1, j = n-1, k = m+n -1;",
-                    "while(i >= 0 && j >= 0){",
-                        "if(nums1[i] > nums2[j]){",
-                            "nums1[k] = nums1[i];",
-                            "i--;",
-                        "}else{",
-                            "nums1[k] = nums2[j];",
-                            "j--;",
-                        "}",
-                        "k--;",
-                    "}",
-                    "while(j >= 0){",
-                        "nums1[k] = nums2[j];",
-                        "k--;j--;",
-                    "}"
-                ]
-            },
-            "Best time to buy and sell stock":[
-                "int minPrice = INT_MAX;",
-                "int maxProfit = 0;",
-                "for(int price: prices){",
-                    "minPrice = min(minPrice,price);",
-                    "int profit = price - minPrice;",
-                    "maxProfit = max(maxProfit,profit);",
-                "}",
-                "return maxProfit;"
-            ]
+      },
+      "Search Insert Position": {
+        "approach": {
+          "first": [
+            "for (int i = 0; i < nums.size(); i++) {",
+            "  if (nums[i] == target) {",
+            "    return i;",
+            "  }",
+            "  if (nums[i] > target) {",
+            "    return i;",
+            "  }",
+            "}",
+            "return nums.size();"
+          ]
         }
-    },{
-        "date": "07.03.2024",
-        "platform":"Leetcode",
-        "question_code_attempted":[136,169],
-        "question_name":{
-            "Single Number":{
-                "approach":{
-                    "first":[
-                        "int res = 0;",
-                        "for(int num :nums){",
-                            "res ^= num;",
-                        "}return res;"
-                    ],
-                    "second":[
-                        "int n = nums.size();",
-                        "for (int i = 0; i < n; ++i) {",
-                            "bool foundDuplicate = false;",
-                            "for (int j = 0; j < n; ++j) {",
-                                "if (i != j && nums[i] == nums[j]) {",
-                                    "foundDuplicate = true;",
-                                    "break;",
-                                "}}",
-                            "if (!foundDuplicate) {",
-                                "return nums[i];",
-                            "}}return -1;"
-                    ]
-                }
-            },
-            "Majority Elements":{
-                "approach":{
-                    "first":[
-                        "int n = nums.size(); int count = 1; int majorityElement = nums[0];",
-                        "for (int i = 1; i < n; ++i) {",
-                            "if (nums[i] == majorityElement) {",
-                                "count++; } else {",
-                                "count--;",
-                                "if (count == 0) {",
-                                    "majorityElement = nums[i];",
-                                    "count = 1;",
-                        "}}}return majorityElement;"
-                    ]
-                }
-            }
-        }
-    },{
-        "date": "08.03.2024",
-        "platform":"Leetcode",
-        "question_code_attempted":[217,219],
-        "question_name":{
-            "Contains Duplicate":{
-                "approach":{
-                    "first":[
-                        "sort(nums.begin(), nums.end());", 
-                        "for(int i = 0; i < nums.size() - 1; i++){",
-                            "int ele = nums[i];",
-                            "if(ele == nums[i+1]){",
-                                "return true;",
-                        "}}return false;"
-                    ]
-                }
-            },
-            "Contains Duplicate II":{
-                "approach":{
-                    "first":[
-                        "unordered_map<int, int> hashMap;",
-                        "for (int i = 0; i < nums.size(); ++i) {",
-                            "if (hashMap.find(nums[i]) != hashMap.end()) {",
-                                "if (abs(i - hashMap[nums[i]]) <= k) {",
-                                    "return true;",
-                        "}}hashMap[nums[i]] = i;",
-                        "}return false;"
-                    ],"second":[
-                        "for(int i = 0; i < nums.size()-1;i++){",
-                            "int ele = nums[i];",
-                            "for(int j = i+1 ; j < nums.size(); j++){",
-                                "if(ele == nums[j]){",
-                                    "if(abs(i - j)<=k){",
-                                        "return true;",
-                        "}}}}return false;"
-                    ]
-                }
-            }
-        }
-    },{
-        "date": "09.03.2024",
-        "platform":"Leetcode",
-        "question_code_attempted":[228,268],
-        "question_name":{
-            "Summary Ranges":{
-                "approach":{
-                    "first":[
-                        "void Range(vector<string>& res,int start,int end){",
-                            "if(start != end){",
-                                "res.push_back(to_string(start)+ '->'+to_string(end));",
-                            "}else{",
-                                "res.push_back(to_string(start));",
-                        "}}",
-                        "vector<string> summaryRanges(vector<int>& nums) {",
-                            "vector<string> res;",
-                            "if(nums.size() == 0){",
-                                "return res;",
-                            "}",
-                            "int start = nums[0], end = nums[0];",
-                            "for(int i = 1; i < nums.size(); i++){",
-                                "if(nums[i] == nums[i-1]+1){",
-                                    "end = nums[i];",
-                                "}else{",
-                                    "Range(res,start,end);",
-                                    "start = nums[i];",
-                                    "end = nums[i];",
-                                "}}",
-                            "Range(res,start,end);",
-                            "return res;"
-                    ]
-                }
-            },
-            "Missing Number":{
-                "approach":{
-                    "first":[
-                        "sort(nums.begin(),nums.end());",
-                        "for(int i = 0; i<nums.size(); ++i){",
-                            "if(nums[i] != i){",
-                                "return i;",
-                            "}}",
-                        "return nums.size();"
-                    ]
-                }
-            }
-        }
+      }
     }
+  },
+  {
+    "date": "06.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [66, 88, 121],
+    "question_name": {
+      "Plus One": {
+        "approach": {
+          "first": [
+            "int n = digits.size();",
+            "digits[n - 1] += 1;",
+            "for (int i = n - 1; i > 0; --i) {",
+            "  if (digits[i] >= 10) {",
+            "    digits[i] -= 10;",
+            "    digits[i - 1] += 1;",
+            "  }",
+            "}",
+            "if (digits[0] >= 10) {",
+            "  digits[0] -= 10;",
+            "  digits.insert(digits.begin(), 1);",
+            "}",
+            "return digits;"
+          ]
+        }
+      },
+      "Merge sorted array": {
+        "first": [
+          "int i = m-1, j = n-1, k = m+n -1;",
+          "while(i >= 0 && j >= 0){",
+          "if(nums1[i] > nums2[j]){",
+          "nums1[k] = nums1[i];",
+          "i--;",
+          "}else{",
+          "nums1[k] = nums2[j];",
+          "j--;",
+          "}",
+          "k--;",
+          "}",
+          "while(j >= 0){",
+          "nums1[k] = nums2[j];",
+          "k--;j--;",
+          "}"
+        ]
+      },
+      "Best time to buy and sell stock": [
+        "int minPrice = INT_MAX;",
+        "int maxProfit = 0;",
+        "for(int price: prices){",
+        "minPrice = min(minPrice,price);",
+        "int profit = price - minPrice;",
+        "maxProfit = max(maxProfit,profit);",
+        "}",
+        "return maxProfit;"
+      ]
+    }
+  },
+  {
+    "date": "07.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [136, 169],
+    "question_name": {
+      "Single Number": {
+        "approach": {
+          "first": [
+            "int res = 0;",
+            "for(int num :nums){",
+            "res ^= num;",
+            "}return res;"
+          ],
+          "second": [
+            "int n = nums.size();",
+            "for (int i = 0; i < n; ++i) {",
+            "bool foundDuplicate = false;",
+            "for (int j = 0; j < n; ++j) {",
+            "if (i != j && nums[i] == nums[j]) {",
+            "foundDuplicate = true;",
+            "break;",
+            "}}",
+            "if (!foundDuplicate) {",
+            "return nums[i];",
+            "}}return -1;"
+          ]
+        }
+      },
+      "Majority Elements": {
+        "approach": {
+          "first": [
+            "int n = nums.size(); int count = 1; int majorityElement = nums[0];",
+            "for (int i = 1; i < n; ++i) {",
+            "if (nums[i] == majorityElement) {",
+            "count++; } else {",
+            "count--;",
+            "if (count == 0) {",
+            "majorityElement = nums[i];",
+            "count = 1;",
+            "}}}return majorityElement;"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "date": "08.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [217, 219],
+    "question_name": {
+      "Contains Duplicate": {
+        "approach": {
+          "first": [
+            "sort(nums.begin(), nums.end());",
+            "for(int i = 0; i < nums.size() - 1; i++){",
+            "int ele = nums[i];",
+            "if(ele == nums[i+1]){",
+            "return true;",
+            "}}return false;"
+          ]
+        }
+      },
+      "Contains Duplicate II": {
+        "approach": {
+          "first": [
+            "unordered_map<int, int> hashMap;",
+            "for (int i = 0; i < nums.size(); ++i) {",
+            "if (hashMap.find(nums[i]) != hashMap.end()) {",
+            "if (abs(i - hashMap[nums[i]]) <= k) {",
+            "return true;",
+            "}}hashMap[nums[i]] = i;",
+            "}return false;"
+          ],
+          "second": [
+            "for(int i = 0; i < nums.size()-1;i++){",
+            "int ele = nums[i];",
+            "for(int j = i+1 ; j < nums.size(); j++){",
+            "if(ele == nums[j]){",
+            "if(abs(i - j)<=k){",
+            "return true;",
+            "}}}}return false;"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "date": "09.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [228, 268],
+    "question_name": {
+      "Summary Ranges": {
+        "approach": {
+          "first": [
+            "void Range(vector<string>& res,int start,int end){",
+            "if(start != end){",
+            "res.push_back(to_string(start)+ '->'+to_string(end));",
+            "}else{",
+            "res.push_back(to_string(start));",
+            "}}",
+            "vector<string> summaryRanges(vector<int>& nums) {",
+            "vector<string> res;",
+            "if(nums.size() == 0){",
+            "return res;",
+            "}",
+            "int start = nums[0], end = nums[0];",
+            "for(int i = 1; i < nums.size(); i++){",
+            "if(nums[i] == nums[i-1]+1){",
+            "end = nums[i];",
+            "}else{",
+            "Range(res,start,end);",
+            "start = nums[i];",
+            "end = nums[i];",
+            "}}",
+            "Range(res,start,end);",
+            "return res;"
+          ]
+        }
+      },
+      "Missing Number": {
+        "approach": {
+          "first": [
+            "sort(nums.begin(),nums.end());",
+            "for(int i = 0; i<nums.size(); ++i){",
+            "if(nums[i] != i){",
+            "return i;",
+            "}}",
+            "return nums.size();"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "date": "10.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [283, 349],
+    "question_name": {
+      "Move Zeros": {
+        "approach file": "/Arrays/283_Move_zeros.cpp"
+      },
+      "Intersection of Two arrays": {
+        "approach file": "/Arrays/349_Intersection_of_two_array.cpp"
+      }
+    }
+  }
 ]
