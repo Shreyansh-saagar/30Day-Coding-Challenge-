@@ -261,5 +261,18 @@
         "approach file": "/Arrays/448_Find_All_Missing_Number.cpp"
       }
     }
+  },
+  {
+    "date": "12.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [455, 485],
+    "question_name": {
+      "Assign Cookies": {
+        "approach file": "/Arrays/455_assign_cookies.cpp"
+      },
+      "Max Consecutive Ones": {
+        "approach file": "/Arrays/485_Max_consecutive_ones.cpp"
+      }
+    }
   }
 ]
