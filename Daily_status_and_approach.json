@@ -274,5 +274,18 @@
         "approach file": "/Arrays/485_Max_consecutive_ones.cpp"
       }
     }
+  },
+  {
+    "date": "13.03.2024",
+    "platform": "Leetcode",
+    "question_code_attempted": [496],
+    "question_name": {
+      "Next Greater Element 1": {
+        "approach file": "/Arrays/496_Next_greater_element_1.cpp"
+      },
+      "Max Consecutive Ones": {
+        "approach file": "/Arrays/485_Max_consecutive_ones.cpp"
+      }
+    }
   }
 ]
